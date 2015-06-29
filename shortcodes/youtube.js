@@ -5,10 +5,15 @@ var template  = require('hogan.js').compile(
 )
 
 module.exports = function(code) {
-  var src = code.attrs.named.src ? code.attrs.named.src : code.attrs.numeric[0]
 
-  if (src.charAt(0) === '=')
+  var src = code.content ? code.content :
+    code.attrs.named.src ? code.attrs.named.src : code.attrs.numeric[0]
+
+  if (src && src.charAt(0) === '=')
     src = src.substr(1)
+
+  if (!src)
+    return
 
   return template.render({ src : src })
 }
