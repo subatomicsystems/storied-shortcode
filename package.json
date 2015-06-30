@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "async": "^1.2.1",
+    "body-parser": "^1.13.1",
     "bunyan": "^1.4.0",
+    "express": "^4.13.0",
     "glob": "^5.0.12",
     "hogan.js": "^3.0.2",
     "lodash": "^3.9.3",
