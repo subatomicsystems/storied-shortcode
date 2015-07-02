@@ -9,7 +9,7 @@ describe('With Options', function() {
   var body = require('fs').readFileSync(__dirname + '/fixture.html', 'utf-8')
 
   it('should minify when specified', function(done) {
-    parse(body, { minify : true },function(err, html) {
+    parse(body, { minify : true, verbose : false, minify_opts : { collapseWhitespace : true } }, function(err, html) {
       should.not.exist(err)
 
       var $ = cheerio.load(html)
