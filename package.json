@@ -10,7 +10,8 @@
     "express": "^4.13.0",
     "glob": "^5.0.12",
     "hogan.js": "^3.0.2",
-    "lodash": "^3.9.3",
+    "html-minifier": "^0.7.2",
+    "lodash": "^3.10.0",
     "wordpress-shortcode": "subatomicsystems/node-wordpress-shortcode"
   },
   "devDependencies": {
