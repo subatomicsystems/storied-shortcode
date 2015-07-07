@@ -18,8 +18,10 @@ app.post('/shortcode', function (req, res, next) {
 
   var body = req.body
 
-  if (_.isEmpty(body))
+  if (_.isEmpty(body)) {
+    res.status(400)
     return next('Could not parse empty body')
+  }
 
   parse(body, function(err, html) {
     if (err)
