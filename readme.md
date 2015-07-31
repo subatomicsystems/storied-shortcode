@@ -3,7 +3,7 @@
 
 ## SoundCloud
 
-`[soundcloud url="https://api.soundcloud.com/tracks/206370322" width="100%" height="450" iframe="true" /]`
+`[soundcloud url="https://api.soundcloud.com/tracks/206370322" params="auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true" width="100%" height="450" iframe="true" /]`
 
 params are optional and control the look of the widget.
 
