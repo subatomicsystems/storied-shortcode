@@ -20,3 +20,11 @@ or
 or
 
 `[youtube=http://youtube.com/watch/?v=123456]`
+
+## Instagram
+
+`[instagram url=http://instagram.com/p/bNd86MSFv6/ hidecaption=true width=320]`
+
+or
+
+`[instagram url=http://instagram.com/p/bNd86MSFv6/ /]`
