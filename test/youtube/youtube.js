@@ -13,7 +13,7 @@ describe('YouTube', function() {
       should.not.exist(err)
 
       var $ = cheerio.load(html)
-      $('iframe[src*="youtube.com"], iframe[src*="youtu.be"]').length.should.equal(4)
+      $('iframe[src*="youtube.com"], iframe[src*="youtu.be"]').length.should.equal(5)
 
       done()
     })
