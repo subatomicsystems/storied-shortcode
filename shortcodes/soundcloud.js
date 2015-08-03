@@ -4,16 +4,16 @@ var template  = require('hogan.js').compile(
   require('fs').readFileSync(__dirname + '/../templates/soundcloud.mustache', 'utf-8')
 )
 
-module.exports = function(code) {
+module.exports = function(code, callback) {
 
   var params = code.attrs.named.params
-  var url = code.attrs.named.url ? code.attrs.named.url : code.attrs.numeric[0]
+  var url    = code.attrs.named.url ? code.attrs.named.url : code.attrs.numeric[0]
 
   if (url && url.charAt(0) === '=')
     url = url.substr(1)
 
   if (!url)
-    return
+    return callback(null)
 
-  return template.render({ url : url, params : params })
+  return callback(null, template.render({ url : url, params : params }));
 }
