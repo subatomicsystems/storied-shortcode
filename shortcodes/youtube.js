@@ -4,7 +4,7 @@ var template  = require('hogan.js').compile(
   require('fs').readFileSync(__dirname + '/../templates/youtube.mustache', 'utf-8')
 )
 
-module.exports = function(code) {
+module.exports = function(code, callback) {
 
   var src = code.content ? code.content :
     code.attrs.named.src ? code.attrs.named.src : code.attrs.numeric[0]
@@ -13,7 +13,7 @@ module.exports = function(code) {
     src = src.substr(1)
 
   if (!src)
-    return
+    return callback(null)
 
-  return template.render({ src : src })
+  return callback(null, template.render({ src : src }))
 }

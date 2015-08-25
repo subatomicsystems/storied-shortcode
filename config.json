@@ -1,3 +1,4 @@
 {
-  "port" : 64014
+  "port"       : 64014,
+  "smartifier" : "http://node.storied.co/api/smartifier/smartify"
 }
