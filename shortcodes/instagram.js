@@ -21,7 +21,8 @@ module.exports = function(code, callback) {
     url    : config.smartifier,
     method : 'POST',
     body : {
-      html : url
+      html : url,
+      options : { 'smartify' : ['instagram'] }
     },
     json : true
   }, function (err, res, body) {
