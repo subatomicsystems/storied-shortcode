@@ -1,5 +1,7 @@
 'use strict';
 
+var debug = require('debug')('parser:youtube')
+
 var template  = require('hogan.js').compile(
   require('fs').readFileSync(__dirname + '/../templates/youtube.mustache', 'utf-8')
 )
@@ -15,5 +17,9 @@ module.exports = function(code, callback) {
   if (!src)
     return callback(null)
 
-  return callback(null, template.render({ src : src }))
+  debug('YouTube URL found: ' + src)
+
+  var renderedTemplate = template.render({ src : src })
+  debug('YouTube rendered template: ' + renderedTemplate)
+  return callback(null, renderedTemplate)
 }

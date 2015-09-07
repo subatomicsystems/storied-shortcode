@@ -1,6 +1,18 @@
 
 # Shortcodes
 
+## Test
+
+`npm test`
+
+## Debug
+
+`DEBUG=parser:* mocha test/**/*.js`
+
+or debug a particular shortcode parser
+
+`DEBUG=parser:youtube mocha test/youtube/youtube.js`
+
 ## SoundCloud
 
 `[soundcloud url="https://api.soundcloud.com/tracks/206370322" params="auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true" width="100%" height="450" iframe="true" /]`

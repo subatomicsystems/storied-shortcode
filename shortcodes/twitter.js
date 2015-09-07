@@ -6,6 +6,7 @@
 
 var config  = require('../config.json')
 var request = require('request')
+var debug = require('debug')('parser:twitter')
 
 module.exports = function(code, callback) {
 
@@ -16,6 +17,8 @@ module.exports = function(code, callback) {
 
   if (!url)
     return callback(null)
+
+  debug('Twitter URL found: ' + url)
 
   request({
     url    : config.smartifier,
@@ -28,7 +31,8 @@ module.exports = function(code, callback) {
   }, function (err, res, body) {
     if (err)
       return callback(null)
-    else
-      return callback(null, body.html)
+
+    debug('Twitter Smartified HTML: ' + body.html)
+    return callback(null, body.html)
   })
 }

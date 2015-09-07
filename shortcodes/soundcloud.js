@@ -1,5 +1,7 @@
 'use strict';
 
+var debug = require('debug')('parser:soundcloud')
+
 var template  = require('hogan.js').compile(
   require('fs').readFileSync(__dirname + '/../templates/soundcloud.mustache', 'utf-8')
 )
@@ -15,5 +17,9 @@ module.exports = function(code, callback) {
   if (!url)
     return callback(null)
 
-  return callback(null, template.render({ url : url, params : params }));
+  debug('SoundCloud URL found: ' + url)
+
+  var renderedTemplate = template.render({ url : url, params : params })
+  debug('SoundCloud rendered template: ' + renderedTemplate)
+  return callback(null, renderedTemplate);
 }
