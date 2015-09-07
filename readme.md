@@ -40,3 +40,7 @@ or
 or
 
 `[instagram url=http://instagram.com/p/bNd86MSFv6/ /]`
+
+## Twitter
+
+`[twitter url=https://twitter.com/gdemey/status/636706988211208197]`
